@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='chatbot.css') }}">
+    <style>
+        .chat-response {
+            font-family: Arial, sans-serif; /* Change the font here */
+            text-align: left; /* Change the alignment here (e.g., left, center, right) */
+            margin-bottom: 10px; /* Adjust margin as needed */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007BFF; /* Change the title color to blue */
+        }
+
+        form {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        #chat-output {
+            text-align: center; /* Align the chat responses to the left */
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 5px;
+            width: 70%;
+            max-width: 600px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+        }
+
+        .chat-message {
+            background-color: #007BFF; /* Change the chatbot's response background color to blue */
+            color: #fff; /* Change the text color to white */
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .user-message {
+            background-color: #e1f5fe;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI ka headache</h1>
+    <form method="POST" action="/chat">
+        <input type="text" name="user_input" placeholder="Type your message...">
+        <input type="submit" value="Send">
+    </form>
+    <div id="chat-output">
+        <!-- Chatbot responses will be displayed here -->
+        <div class="chat-message">Chatbot response: This is a chatbot response.</div>
+        <div class="user-message">User message: Hello, this is a user message.</div>
+    </div>
+</body>
+</html>

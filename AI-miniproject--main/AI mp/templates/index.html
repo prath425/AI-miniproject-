@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI ka headache</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='chatbot.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/images/background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #FFD700 !important;
+        }
+
+        form {
+            text-align: center;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="text"] {
+            width: 200%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        input[type="submit"] {
+            background-color: #FF5733;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        #chat-output {
+            text-align: center;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: transparent !important;
+            border-radius: 5px;
+            width: 70%;
+            max-width: 600px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-message {
+            background-color: transparent !important;
+            color: #007BFF !important; /* Bright Blue text color for the names */
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold; /* Make the text bold */
+        }
+
+        .user-message {
+            background-color: transparent !important;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: #FF5733;">CollegeCONN3CT</h1>
+    <form method="POST" action="/chat">
+        <input type="text" name="user_input" placeholder="Type your message...">
+        <input type="submit" value="Send" style="background-color: #FF5733; color: #fff;">
+    </form>
+    <div id="chat-output">
+        <!-- Chatbot responses will be displayed here -->
+    </div>
+</body>
+</html>

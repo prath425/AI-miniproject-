@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+   background-image: url('/static/images/background.jpg');
+    background-size: cover; /* Scale the background image to cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+    h1 {
+            text-align: center;
+            color: #007BFF;
+}
+
+
+form {
+    text-align: center;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 50%; /* Set the width to 50% of the page */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+#chat-output {
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 70%;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ .chat-message {
+    background-color: transparent !important; /* Set the background color to transparent */
+    color: #FF5733 !important; /* Text color for the names (e.g., attractive color) */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.user-message {
+    background-color: #e1f5fe;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
